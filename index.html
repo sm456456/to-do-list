@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/favicon.ico" type="image">
+    <script src="./main.js" defer></script>
+
     <title>Document</title>
 </head>
+
 <body>
     <header class="header">
         <nav class="navbar">
@@ -18,57 +22,104 @@
             </ul>
         </nav>
     </header>
-    <section>
-        <h3>Todo</h3>
+
+    <section class="todo-section">
+        <div class="todo-container">
+            <div class="add-task">
+                <input type="text">
+                <span class="plus"> +</span>
+            </div>
+            <div class="tasks-content">
+                <span class="no-tasks-message">
+                    No task here
+                </span>
+                <span class="task-box">
+                    task one
+                    <span 
+                    class="delete" >DELETE</span>
+                </span>
+                <span class="task-box ">
+                    task two
+                    <span class="delete" >DELETE</span>
+                </span>
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+        <div class="task-stats">
+            <div class="tasks-count">
+                TASK <span>0</span>
+            </div>
+
+            <div class="tasks-completed">
+                Completed <span>0</span>
+            </div>
+
     </section>
-    <footer class="footer_bg">
-        <div class="footer_content">
-            <div class="footer_box about_us_text" >
-                <h2 class="content_header content_header_left">About us</h2>
-                <p class="about_us">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur iure eaque dolor, porro illum odio, et quis eveniet </p>
+
+    <footer class=" footer_bg ">
+        <div class="footer_content ">
+            <div class="footer_box about_us_text ">
+                <h2 class="content_header content_header_left ">About us</h2>
+                <p class="about_us ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem consequatur iure eaque dolor, porro illum odio, et quis eveniet </p>
             </div>
-            <div class="footer_box">
-                <h2 class="content_header">Information</h2>
-                <ul class="content_text">
+            <div class="footer_box ">
+                <h2 class="content_header ">Information</h2>
+                <ul class="content_text ">
                     <li>About us</li>
                     <li>Blog</li>
                     <li>Events</li>
                     <li>More search</li>
                 </ul>
             </div>
-            <div class="footer_box">
-                <h2 class="content_header">Helpful links</h2>
-                <ul class="content_text">
+            <div class="footer_box ">
+                <h2 class="content_header ">Helpful links</h2>
+                <ul class="content_text ">
                     <li>About us</li>
                     <li>Blog</li>
                     <li>Events</li>
                     <li>More search</li>
                 </ul>
             </div>
-            <div class="footer_box">
-                <div class="subscribe">
-                    <h2 class="subscripe_2">Subcribe for more Info</h2>
-                    
-                </div>
-                <div class="mailtext">
-
-                <label for="email">Enter your email:</label>
-
-                <input type="email" id="email"
-                        pattern="" size="28" required>
+            <div class="footer_box ">
+                <div class="subscribe ">
+                    <h2 class="subscripe_2 ">Subcribe for more Info</h2>
 
                 </div>
-                
+                <div class="mailtext ">
+
+                    <label for="email ">Enter your email:</label>
+
+                    <input type="email " id="email " pattern=" " size="28 " required>
+
+                </div>
+
             </div>
         </div>
-        <div class="footer_socials">
-            <img class="footer_pics" src="img/034-instagram.png" alt="logo insta">
-            <img class="footer_pics" src="img/014-twitter.png" alt="logo insta">
-            <img class="footer_pics" src="img/039-github.png" alt="logo insta">
-            <img class="footer_pics" src="img/045-facebook.png" alt="logo insta">
+        <div class="footer_socials ">
+            <img class="footer_pics " src="img/034-instagram.png " alt="logo insta ">
+            <img class="footer_pics " src="img/014-twitter.png " alt="logo insta ">
+            <img class="footer_pics " src="img/039-github.png " alt="logo insta ">
+            <img class="footer_pics " src="img/045-facebook.png " alt="logo insta ">
 
         </div>
-        
+
     </footer>
+
+
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </body>
+
 </html>
