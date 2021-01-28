@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -72,6 +71,7 @@ body {
     padding: 10px 15px;
     border: none;
     background-color: rgba(255, 255, 255, .3);
+    box-sizing: border-box;
     width: calc(100% - 15px);
     color: #fff;
     font-size: 20px
@@ -130,9 +130,16 @@ body {
     border-radius: 4px;
     cursor: pointer;
 }
-
-.todo-container .tasks-content .task-box .delete:hover {
-    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24);
+.todo-container .tasks-content .task-box .edit {
+    float: right;
+    background-color: #541ee9;
+    padding: 4px 10px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px ;
 }
 
 .todo-container .tasks-content .task-box.finished {
@@ -146,10 +153,6 @@ body {
     font-size: 12px;
 }
 
-.tasks-all-complete, .tasks-all-delete {
-    cursor: pointer;
-    margin: 20px;
-}
 .task-stats .tasks-count {
     width: 50%;
     float: left;
@@ -164,6 +167,7 @@ body {
     float: right;
     padding: 10px;
     text-align: right;
+    margin-top: -39px;
 }
 
 .task-stats .tasks-count span,
@@ -183,7 +187,92 @@ body {
     background-color: blue;
 }
 
+.EditTexti{
+    width:250px;
+    font-size: 17px;
+    font-weight: bold;
+    
 
+}
+
+
+.okspan{
+    float: right;
+    background-color: #541ee9;
+    padding: 4px 10px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px ;
+
+}
+
+
+
+.tasks-all , .complete-all {
+    background-color: #66A182;;
+    width: 70px;
+    cursor: pointer;
+    height: 20px;
+    color: #FFF;
+    transition: all 0.5s;
+    position: relative;
+
+
+}
+
+
+.tasks-all::before , .complete-all::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(255,255,255,0.1);
+    transition: all 0.3s;
+
+
+}
+
+
+
+.tasks-all:hover::before , .complete-all:hover::before {
+
+    opacity: 0 ;
+    transform: scale(0.5,0.5);
+}
+
+.tasks-all::after , .complete-all::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    border: 1px solid rgba(255,255,255,0.5);
+    transform: scale(1.2,1.2);
+
+}
+
+
+.tasks-all:hover::after , .complete-all:hover::after {
+
+    opacity: 1;
+    transform: scale(1,1);
+}
+
+
+.tasks-all::before , .complete-all::before {
+
+
+}
 /***footer***/
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
