@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +8,13 @@
 
 body {
     margin: 0;
-    font-family: Arial, Tahoma;
+    font-family:'Lato', sans-serif;
+    letter-spacing: 2px;
+}
+
+.main-div {
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 
@@ -16,6 +25,7 @@ body {
     flex-direction: row;
     background-color: lightgray;
     justify-content: space-between;
+    margin-bottom: 100px;
 }
 
 .navbar ul {
@@ -31,7 +41,6 @@ body {
     padding: 22px;
     text-decoration: none;
     color:#009688;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .list a:hover {
@@ -133,6 +142,7 @@ body {
 .todo-container .tasks-content .task-box .edit {
     float: right;
     background-color: #541ee9;
+    opacity: 0.5;
     padding: 4px 10px;
     color: #fff;
     font-size: 12px;
@@ -180,11 +190,11 @@ body {
 }
 
 .task-stats .tasks-count span {
-    background-color: red;
+    background-color: #e66407;
 }
 
 .task-stats .tasks-completed span {
-    background-color: blue;
+    background-color:#e66407;
 }
 
 .EditTexti{
@@ -212,13 +222,14 @@ body {
 
 
 .tasks-all , .complete-all {
-    background-color: #66A182;;
+    background-color: #009688;
     width: 70px;
     cursor: pointer;
     height: 20px;
     color: #FFF;
     transition: all 0.5s;
     position: relative;
+
 
 
 }
@@ -280,17 +291,18 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 1920px;
+    width: auto;
     height: 400px;
-    background-color: darkgrey
+    background-color: lightgray;
+    margin-top: 140px;
 }
 
 .footer_content {
     display: flex;
     justify-content: space-around;
-    width: 1700px;
+    width: 90%;
     height: 270px;
-    background-color: gainsboro;
+    background-color:lightgray;
     margin-top: 20px;
 }
 
@@ -298,13 +310,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 1700px;
+    width: 100%;
     height: 80px;
-    background-color: gainsboro;
+    background-color:#009688;
 }
 
 .footer_box {
-    background-color: gainsboro;
+    background-color:lightgray;
     width: 380px;
 }
 
@@ -318,14 +330,24 @@ body {
     color: black;
     list-style: none;
     font-family: 'Lato', sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 45px;
 }
+
+.content_text a {
+    text-decoration: none;
+    color: black;
+}
+
+.content_text a:hover {
+    color: #009688;
+}
+
 
 .content_header {
     color: black;
     font-family: 'Lato', sans-serif;
-    font-size: 25px;
+    font-size: 15px;
     margin-left: 40px;
 }
 
@@ -333,6 +355,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align-last: center;
 }
 
 .subscribe {
@@ -341,7 +364,7 @@ body {
     align-items: center;
     font-family: 'Lato', sans-serif;
     color: black;
-    font-size: 15px;
+    font-size: 10px;
 }
 
 #input1 {
@@ -356,8 +379,9 @@ body {
 
 .about_us {
     font-family: 'Lato', sans-serif;
-    font-size: 20px;
+    font-size: 15px;
     padding-right: 90px;
+    margin-left: 50px;
 }
 
 .about_us_text {
