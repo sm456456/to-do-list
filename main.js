@@ -20,7 +20,7 @@ window.onload = () => {
 
 theAddButton.onclick = () => {
   if (theInput.value === "") {
-    swal("Oops", "Please add a text !", "error");
+    swal("Oops", "Please add a task !", "error");
   } else {
     let noTaskMsg = document.querySelector(".no-tasks-message");
 
@@ -37,17 +37,17 @@ theAddButton.onclick = () => {
 
     // Create The Main Span Text
     let text = document.createTextNode(theInput.value);
-    
+
     // Create The Delete Button Text
     let deletetext = document.createTextNode("DELETE");
 
-       // Create EDIT Button
-       let editElement = document.createElement("span");
+    // Create EDIT Button
+    let editElement = document.createElement("span");
 
     // Create The EDIT Button Text
     let edittext = document.createTextNode("EDIT");
 
- 
+
     // Add Text To Main Span
     mainSpan.appendChild(text);
 
@@ -87,7 +87,7 @@ theAddButton.onclick = () => {
     //calculate tasks
     calculateTasks()
 
-    swal("Good Job !", "Task added", "success");
+    swal("New task added", "", "success");
   }
 };
 
@@ -99,19 +99,19 @@ mainSpan = document.querySelector(".task-box")
 
 
 
- // EDIT: If the ToDo task itself is clicked and modified (save on blur/return)
-  // https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Editable_content
+// EDIT: If the ToDo task itself is clicked and modified (save on blur/return)
+// https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Editable_content
 
 
-let doItEdit = () =>{
-    mainSpan.contentEditable = "true";
+let doItEdit = () => {
+  mainSpan.contentEditable = "true";
 }
 
-theEditbutton.onclick =(e)=>{
+theEditbutton.onclick = (e) => {
 
 
-    doItEdit();
-    
+  doItEdit();
+
 }
 //   if (e.target.tagName.toLowerCase() === "p") {
 //     const originalTask = e.target.textContent;
@@ -145,14 +145,15 @@ document.addEventListener("click", (e) => {
     e.target.parentNode.remove();
 
 
-        ///////// new editing ////////////
+    ///////// new editing ////////////
 
     // Check Number Of Tasks Inside The Container
     if (tasksContainer.childElementCount == 0) {
 
-        createNoTasks();}
+      createNoTasks();
+    }
 
-    swal("Good Job !", "Task deleted", "success");
+    swal("Task deleted!", "", "success");
   }
 
   if (e.target.classList.contains("task-box")) {
@@ -160,68 +161,69 @@ document.addEventListener("click", (e) => {
   }
 
 
-   //calculate tasks
-   calculateTasks()
+  //calculate tasks
+  calculateTasks()
 
 });
 
 
 
 // remove all
-taskAll.onclick =()=>{
-    document.querySelectorAll('.task-box').forEach(n => n.remove());
+taskAll.onclick = () => {
+  document.querySelectorAll('.task-box').forEach(n => n.remove());
 
-   //calculate tasks
-   calculateTasks()
-    ///////// new editing ////////////
-    if (tasksContainer.childElementCount == 0) {
+  //calculate tasks
+  calculateTasks()
+  ///////// new editing ////////////
+  if (tasksContainer.childElementCount == 0) {
 
-        createNoTasks();}
-    
+    createNoTasks();
+  }
+
 }
 // finished all
-completeAll.onclick =()=>{
-    document.querySelectorAll('.task-box').forEach(n => n.classList.toggle("finished"));
+completeAll.onclick = () => {
+  document.querySelectorAll('.task-box').forEach(n => n.classList.toggle("finished"));
 
 
-       //calculate tasks
-       calculateTasks()
+  //calculate tasks
+  calculateTasks()
 }
 
 
 
 
-    ///////// new editing ////////////
+///////// new editing ////////////
 
 // Function To Create No Tasks Message
 function createNoTasks() {
 
-    // Create Message Span Element
-    let msgSpan = document.createElement("span");
-  
-    // Create The Text Message
-    let msgText = document.createTextNode("No Tasks To Show");
-  
-    // Add Text To Message Span Element
-    msgSpan.appendChild(msgText);
-  
-    // Add Class To Message Span
-    msgSpan.className = 'no-tasks-message';
-  
-    // Append The Message Span Element To The Task Container
-    tasksContainer.appendChild(msgSpan);
-  
-  }
+  // Create Message Span Element
+  let msgSpan = document.createElement("span");
+
+  // Create The Text Message
+  let msgText = document.createTextNode("No Tasks To Show");
+
+  // Add Text To Message Span Element
+  msgSpan.appendChild(msgText);
+
+  // Add Class To Message Span
+  msgSpan.className = 'no-tasks-message';
+
+  // Append The Message Span Element To The Task Container
+  tasksContainer.appendChild(msgSpan);
+
+}
 
 
 
-  // Function To Calculate Tasks
+// Function To Calculate Tasks
 function calculateTasks() {
 
-    // Calculate All Tasks
-    tasksCount.innerHTML = document.querySelectorAll('.tasks-content .task-box').length;
-  
-    // Calculate Completed Tasks
-    tasksCompleted.innerHTML = document.querySelectorAll('.tasks-content .finished').length;
-  
-  }
+  // Calculate All Tasks
+  tasksCount.innerHTML = document.querySelectorAll('.tasks-content .task-box').length;
+
+  // Calculate Completed Tasks
+  tasksCompleted.innerHTML = document.querySelectorAll('.tasks-content .finished').length;
+
+}
